@@ -129,6 +129,7 @@ export default {
     const selectedPlatform = ref('');
     const selectedRatingOrder = ref('');
 
+    // Función para obtener los videojuegos mejor valorados y tenerlo como default
     const fetchGames = async () => {
       try {
         games.value = await getLatestGames();
@@ -138,6 +139,7 @@ export default {
       }
     };
 
+    // Función para aplicar los filtros de busqueda
     const applyFilters = async () => {
       console.log('Aplicando filtros:', {
         name: searchQuery.value,
@@ -159,6 +161,7 @@ export default {
       }
     };
 
+    // Función para ir a la página de detalles del videojuego
     const goToDetail = (id) => {
       router.push({ name: 'VideogameDetail', params: { id } });
     };

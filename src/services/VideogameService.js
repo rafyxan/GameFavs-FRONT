@@ -11,6 +11,7 @@ export const getLatestGames = async () => {
     }
 };
 
+// Obtener detalles de un videojuego por ID
 export const getGameDetails = async (id) => {
     try {
         if (!id || isNaN(id)) {

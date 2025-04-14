@@ -5,7 +5,7 @@ import VideogameDetail from '../views/VideogameDetail.vue';
 import VideogameStatus from '../views/VideogameStatus.vue';
 import { createRouter, createWebHistory } from 'vue-router';
 
-
+// Definición de las rutas de la aplicación
 const routes = [
     { path: '/', name: 'Login', component: Login },
     { path: '/register', name: 'Register', component: Register },
@@ -14,11 +14,14 @@ const routes = [
     { path: '/videogame/status/:status', name: 'VideogameStatus', component: VideogameStatus, meta: { requiresAuth: true } },
 ];
 
+// Crear una instancia del enrutador
 const router = createRouter({
     history: createWebHistory(),
     routes,
 });
 
+// Guardar la navegación para verificar la autenticación
+// Antes de cada navegación, verifica si la ruta requiere autenticación
 router.beforeEach((to, from, next) => {
     const isAuthenticated = !!localStorage.getItem('token');
 

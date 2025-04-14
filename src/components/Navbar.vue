@@ -39,7 +39,6 @@ import { useUserStore } from '../stores/userStore.js'
 export default {
   setup() {
 
-
     // Eliminar el token de localStorage y redirigir a la página de inicio de sesión
     const logout = () => {
       localStorage.removeItem('token')

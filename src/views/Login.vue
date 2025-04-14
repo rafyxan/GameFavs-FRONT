@@ -35,6 +35,7 @@ export default {
     const password = ref('')
     const router = useRouter()
 
+    // Function mara manejar el login
     const handleLogin = async () => {
       try {
         console.log(username.value, password.value)
@@ -49,6 +50,7 @@ export default {
       }
     }
 
+    // Function para redirigir a la página de registro
     const goToRegister = () => {
       router.push('/register')
     }

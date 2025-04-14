@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
 
-// This store manages the user state, including username and userId
+// Esto almacena el estado del usuario, incluyendo el nombre de usuario y el ID del usuario
 export const useUserStore = defineStore("user", {
     state: () => ({
         username: null,

@@ -26,7 +26,7 @@
                     <div class="card-body">
                         <h5 class="card-title">{{ game.name }}</h5>
                         <p class="card-text"><strong>Fecha de lanzamiento:</strong> {{ game.released || 'No disponible'
-                            }}</p>
+                        }}</p>
                         <p class="card-text"><strong>Plataformas:</strong> {{ game.platforms }}</p>
                         <p class="card-text"><strong>Géneros:</strong> {{ game.genres }}</p>
                         <p class="card-text"><strong>Calificación:</strong> {{ game.rating }}</p>
@@ -53,6 +53,7 @@ export default {
         const statusTitle = ref('');
         const searchQuery = ref(''); // Valor reactivo para el campo de búsqueda
 
+        // Función para obtener los videojuegos según el estado
         const fetchGamesByStatus = async () => {
             try {
                 const status = route.params.status; // Obtener el estado desde la ruta
@@ -91,6 +92,7 @@ export default {
             }
         };
 
+        // Función para eliminar un videojuego del estado
         const removeFromStatus = async (videogameId) => {
             try {
                 const userId = userStore.userId;
@@ -119,6 +121,7 @@ export default {
             }
         };
 
+        // Función para ir a la página de detalles del videojuego
         const goToDetail = (id) => {
             router.push({ name: 'VideogameDetail', params: { id } });
         };
@@ -130,6 +133,7 @@ export default {
             );
         });
 
+        // Llamar a la función al montar el componente
         onMounted(() => {
             fetchGamesByStatus();
         });

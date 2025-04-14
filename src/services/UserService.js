@@ -1,6 +1,7 @@
 import backend from '../config/backend';
 import { useUserStore } from '../stores/userStore'; // Import the user store
 
+// Inicia sesión y obtiene el token de autenticación
 export const loginUser = async (username, password) => {
   try {
     const response = await backend.post(`/users/login`, null, {
@@ -20,6 +21,7 @@ export const loginUser = async (username, password) => {
   }
 };
 
+// Cierra sesión y elimina el token de autenticación
 export const getUserInfo = async () => {
   const token = localStorage.getItem('token');
   if (!token) {
@@ -48,6 +50,7 @@ export const getUserInfo = async () => {
   }
 };
 
+// Registra un nuevo usuario
 export const registerUser = async (email, username, password) => {
   try {
     const response = await backend.post('/users/register', {

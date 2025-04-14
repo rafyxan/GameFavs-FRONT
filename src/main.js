@@ -8,12 +8,14 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import { getUserInfo } from './services/UserService'
 import { createPinia } from 'pinia'
 
-
+// Importar estilos de Element Plus
 const app = createApp(App)
 app.use(ElementPlus)
 
+// Importar el store de Pinia
 const pinia = createPinia()
 app.use(pinia)
+
 
 async function init() {
     // Checkear Token

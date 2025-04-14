@@ -76,7 +76,8 @@ export default {
       return userStore.userId;
     };
 
-    const userId = getUserId(); // Obtener el ID del usuario desde el store
+    // Obtener el ID del usuario desde el store
+    const userId = getUserId();
 
     // Obtener detalles del videojuego desde la API mediante el ID del videojuego
     const fetchGameDetails = async () => {
@@ -151,6 +152,7 @@ export default {
       return game.value.description ? DOMPurify.sanitize(game.value.description) : 'No disponible';
     });
 
+    // Cargar los detalles del videojuego y verificar los estados al montar el componente
     onMounted(async () => {
       try {
         await fetchGameDetails(); // Cargar los detalles del videojuego

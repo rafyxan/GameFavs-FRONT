@@ -47,7 +47,7 @@ export default {
     const password = ref('');
     const confirmPassword = ref('');
 
-
+    // Funcion para manejar el Registro de usuario
     const handleRegister = async () => {
       if (password.value !== confirmPassword.value) {
         alert('Las contraseñas no coinciden');
@@ -62,9 +62,12 @@ export default {
         alert(errorMessage);
       }
     };
+
+    // Funcion para cancelar el registro y redirigir al login
     const cancel = () => {
       router.push('/'); // Redirige al login
     };
+
     return {
       cancel,
       email,

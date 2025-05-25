@@ -4,7 +4,7 @@
 
         <!-- Campo de búsqueda -->
         <div class="mb-4">
-            <input type="text" class="form-control" placeholder="Buscar videojuego por nombre..."
+            <input type="text" class="form-control bg-light" placeholder="Buscar videojuego por nombre..."
                 v-model="searchQuery" />
         </div>
 

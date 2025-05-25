@@ -4,7 +4,7 @@
     <!-- Buscador y botón -->
     <div class="row mb-3">
       <div class="col-md-10">
-        <input type="text" v-model="searchQuery" class="form-control" placeholder="Buscar videojuegos..." />
+        <input type="text" v-model="searchQuery" class="form-control bg-light" placeholder="Buscar videojuegos..." />
       </div>
       <div class="col-md-2">
         <button class="btn btn-primary w-100" @click="applyFilters">
@@ -16,7 +16,7 @@
     <!-- Filtros -->
     <div class="row mb-4">
       <div class="col-md-4">
-        <select v-model="selectedGenre" class="form-select">
+        <select v-model="selectedGenre" class="form-select bg-light">
           <option value="">Géneros</option>
           <option value="4">Acción</option>
           <option value="5">RPG</option>
@@ -37,7 +37,7 @@
         </select>
       </div>
       <div class="col-md-4">
-        <select v-model="selectedPlatform" class="form-select">
+        <select v-model="selectedPlatform" class="form-select bg-light">
           <option value="">Plataformas</option>
           <option value="4">PC</option>
           <option value="5">macOS</option>
@@ -67,7 +67,7 @@
         </select>
       </div>
       <div class="col-md-4">
-        <select v-model="selectedRatingOrder" class="form-select">
+        <select v-model="selectedRatingOrder" class="form-select bg-light">
           <option value="">Calificación</option>
           <option value="-rating">Ascendente</option>
           <option value="rating">Descendente</option>
